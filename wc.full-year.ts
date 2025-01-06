@@ -6,7 +6,11 @@ export async function getYear(): Promise<string> {
         return _year;
     }
     try {
-        const response = await fetch("https://getfullyear.com/api/year", {mode: "cors"});
+        const response = await fetch("https://getfullyear.com/api/year", {
+            method: "GET",
+            mode: "cors",
+            headers: { "Content-Type": "application/json" },
+        });
         const data = await response.json();
         _year = data.year_string || String(data.year);
         return _year;
@@ -18,7 +22,7 @@ export async function getYear(): Promise<string> {
 }
 
 
-class FullYear extends HTMLElement {
+export class FullYear extends HTMLElement {
     private shadow: ShadowRoot;
     year: string;
 
@@ -37,4 +41,6 @@ class FullYear extends HTMLElement {
     }
 }
 
-customElements.define("full-year", FullYear);
+if (!customElements.get('full-year')) {
+  customElements.define('full-year', FullYear);
+}
