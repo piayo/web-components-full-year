@@ -1,6 +1,9 @@
 {
-  "name": "web-components-full-year",
+  "name": "@piayo/web-components-full-year",
+  "description": "A Web Component that shows the current year",
   "version": "1.0.0",
+  "author": "piayo",
+  "license": "MIT",
   "scripts": {
     "build": "esbuild wc.full-year.ts --bundle --minify --outfile=wc.full-year.min.js --format=iife",
     "dev": "esbuild wc.full-year.ts --bundle --outfile=wc.full-year.min.js --format=iife --watch"
