@@ -1,6 +1,6 @@
 # web-components-full-year
 
-A Web Component that shows the current year, using data from GetFullYear.com.
+A Web Component that shows the current year, using data from [GetFullYear.com](https://getfullyear.com/).
 
 Usage
 
